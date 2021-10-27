@@ -13,7 +13,7 @@ targets:
   default:
     name: setWeeklyVersion
     sourceID: newVersion
-    kind: shell
+    kind: xml
     spec:
-      command: bash ./updatecli/updatecli.d/weekly-apply.sh
-
+      file: sample-plugin/pom.xml
+      key: 'project.properties.jenkins\.version'
